@@ -1,12 +1,28 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Sinatra Template</title>
+    <title>Shelf Chef</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   </head>
 
   <body>
+    <header>
+      <div>
+        <h1>Shelf Chef</h1>
+      </div>
+      <nav class="links">
+        <div>
+          <h2>Home</h2>
+        </div>
+        <div>
+          <h2>About</h2>
+        </div>
+      </nav>
+    </header>
+
     <%= yield %>
   </body>
 </html>
