@@ -5,6 +5,9 @@ ruby "3.2.2"
 
 gem "sinatra"
 gem "sinatra-contrib"
+gem "ruby-openai"
+gem "redcarpet"
+
 
 # Use Puma as the app server
 gem "puma", "~> 5.0"
