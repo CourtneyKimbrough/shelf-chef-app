@@ -22,7 +22,7 @@ https://shelf-chef.onrender.com
 
 ---
 
-## 🖼️ Gif
+## 🖼️ GIF
 ![Screen Recording 2025-04-16 at 2 05 21 AM (1)](https://github.com/user-attachments/assets/a733792c-b8af-46cd-a88e-e823a0266cb2)
 
 
