@@ -1,29 +1,63 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Shelf Chef</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link rel="stylesheet" href="/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-    
-  </head>
 
-  <body>
-    <header>
+<head>
+  <title>Shelf Chef</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+  <!--  Loading Screen -->
+  <div id="loading-screen" style="display: none;">
+    <div class="frying-pan">
+      <div class="egg"></div>
+    </div>
+  </div>
+
+
+  <header>
+    <div>
+      <h1>Shelf Chef</h1>
+    </div>
+    <nav class="links">
       <div>
-        <h1>Shelf Chef</h1>
+        <h2><a href="/">Home</a></h2>
       </div>
-      <nav class="links">
-        <div>
-          <h2><a href="/">Home</a></h2>
-        </div>
-        <div>
-          <h2>About</h2>
-        </div>
-      </nav>
-    </header>
+      
+    </nav>
+  </header>
 
-    <%= yield %>
-  </body>
+  <%= yield %>
+
+  <footer>
+    <div>
+      <p>© 2025</p>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const form = document.querySelector('.form-container');
+      const viewRecipeButtons = document.querySelectorAll('.view-recipie');
+      const loadingScreen = document.getElementById('loading-screen');
+
+      if (form) {
+        form.addEventListener('submit', () => {
+          loadingScreen.style.display = 'flex';
+        });
+      }
+      viewRecipeButtons.forEach(button => {
+        button.addEventListener('click', () => {
+          loadingScreen.style.display = 'flex';
+        });
+      });
+    });
+  </script>
+
+</body>
+
 </html>
