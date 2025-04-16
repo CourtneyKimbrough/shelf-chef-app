@@ -5,6 +5,7 @@ require "openai"
 require "http"
 require "json"
 require "redcarpet"
+require "rack/utils"
 
 set :public_folder, 'public'
 
@@ -19,12 +20,19 @@ get("/recipies") do
   
   client = OpenAI::Client.new(access_token: ENV.fetch("OPENAI_API_KEY"))
 
-  request = params.fetch("ingredients")
+  raw_input = params[:ingredients]
+
+  if raw_input.nil? || raw_input.strip.empty?
+    redirect '/', 303  
+  end
+
+  request = Rack::Utils.escape_html(raw_input.strip)
+
   
   message_list = [
     {
       "role" => "system",
-      "content" => "A user will input ingredients and you need to output a recipie they can make with those ingredients."
+      "content" =>  "You are a helpful recipe assistant. A user will provide a list of ingredients they currently have in their kitchen. Your job is to generate a realistic, beginner-friendly recipe based on their input. If the input contains non-food items or is not a list of ingredients, do not ask the user for clarification. Instead, clearly explain that the input was not recognized as a list of ingredients and provide a popular, simple recipe using common household items.Always provide a recipe, even if the input was not recognized as a list of ingredients. Never ask the user for clarification or additional input. Use as many of the user’s ingredients as make sense, but do not invent or ask for additional ingredients. You may only add common kitchen staples such as salt, pepper, oil, butter, and water. Formatting rules: Wrap the recipe title in <h3> tags. Use <h4> tags for the 'Ingredients' and 'Instructions' section headers. Keep the response short, clear, and focused only on the recipe."
     }
   ]
   

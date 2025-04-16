@@ -1,25 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shelf Chef</title>
-    <link rel="stylesheet" href="/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-  </head>
-  <body>
-    <section class="first">
-      <form class="form-container" action="/recipies">
-        <div><label for="ingredients" class="large">
-            Whats in your kitchen?
-          </label></div>
-        <div>
-          <p>Enter what you have and we'll find recipies for you.</p>
-        </div>
-        <div><input class="ingredient-input" type="text" id="ingredients" name="ingredients" placeholder="   e.g. eggs, spinach, cheese, pasta"></div>
-          <div><button class="find-recipies-button">Find Recipies</button></div>
-      </form>
-    </section>
-    <%= @response_html %>
-  </body>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shelf Chef</title>
+  <link rel="stylesheet" href="/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <section class="first">
+    <form class="form-container" action="/recipies">
+      <div><label for="ingredients" class="large">
+          Whats in your kitchen?
+        </label></div>
+      <div>
+        <p class="medium">Enter what you have and we'll find recipies for you.</p>
+      </div>
+      <div><input class="ingredient-input" type="text" id="ingredients" name="ingredients"
+          placeholder="   e.g. eggs, spinach, cheese, pasta" required></div>
+      <div><button class="find-recipies-button">Find Recipies</button></div>
+    </form>
+  </section>
+  <h3 class="popular-recipies">Popular Recipies</h3>
+  <section class="example-recipies">
+    <div class="example-recipie">
+      <img class="food-pic" src="/images/caprese.png" alt="Caprese salad">
+      <div>
+        <h3>Caprese Salad</h3>
+      </div>
+      <div>
+        <p>A simple, yet fancy light salad</p>
+      </div>
+      <div><a href="/recipies?ingredients=Caprese+Salad"><button class="view-recipie">View Recipie</button></a></div>
+    </div>
+    <div class="example-recipie">
+      <img class="food-pic" src="/images/caprese.png" alt="Caprese salad">
+      <div>
+        <h3>Caprese Salad</h3>
+      </div>
+      <div>
+        <p>A simple, yet fancy light salad</p>
+      </div>
+      <div><a href="/recipies?ingredients=Caprese+Salad"><button class="view-recipie">View Recipie</button></a></div>
+    </div>
+    <div class="example-recipie">
+      <img class="food-pic" src="/images/caprese.png" alt="Caprese salad">
+      <div>
+        <h3>Caprese Salad</h3>
+      </div>
+      <div>
+        <p>A simple, yet fancy light salad</p>
+      </div>
+      <div><a href="/recipies?ingredients=Caprese+Salad"><button class="view-recipie">View Recipie</button></a></div>
+    </div>
+  </section>
+</body>
+
 </html>
