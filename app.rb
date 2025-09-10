@@ -8,6 +8,8 @@ require 'redcarpet'
 require 'rack/utils'
 
 set :public_folder, 'public'
+set :views, File.expand_path("views", __dir__)
+
 
 get('/') do
   erb(:homepage)
