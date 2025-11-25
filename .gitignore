@@ -30,6 +30,7 @@
 
 # Ignore dotenv files
 /.env*
+!.env.example
 
 .rbenv-gemsets
 examples.txt
