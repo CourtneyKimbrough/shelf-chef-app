@@ -32,10 +32,13 @@ h3{
 /* Remove default link styling */
 a {
   text-decoration: none;
-}
-
-a:visited{
   color: white;
+}
+a:visited {
+  color: white;
+}
+a:active, a:hover {
+  color: #FFD6C0;
 }
 
 header {
