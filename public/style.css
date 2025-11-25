@@ -82,7 +82,7 @@ header {
   color: #C7253E
 }
 
-.find-recipies-button, .ingredient-input{
+.find-recipes-button, .ingredient-input{
   width: 50vw;
   height: 50px;
   border-radius: 20px;
@@ -93,7 +93,7 @@ header {
   padding-left: 15px;
 }
 
-.find-recipies-button {
+.find-recipes-button {
   color: white;
   background-color: #C7253E;
   border: 0;
@@ -111,9 +111,9 @@ hr{
   padding-bottom: 20px;
 }
 
-/* Example recipie section */
+/* Example recipe section */
 
-section.example-recipies div{
+section.example-recipes div{
   padding: 10px;
   min-width: 300px;
   flex: 1;
@@ -121,7 +121,7 @@ section.example-recipies div{
 }
 
 
-.example-recipies{
+.example-recipes{
   gap: 30px;
   display:flex;
   justify-content: center;
@@ -129,7 +129,7 @@ section.example-recipies div{
   align-items: center;
 }
 
-.popular-recipies{
+.popular-recipes{
   font-size: 2.2em;
   text-align: center;
   color: #E85C0D;
@@ -147,8 +147,8 @@ img.food-pic{
   max-width: 100%;
 }
 
-/* Style view recipie button */
-.view-recipie {
+/* Style view recipe button */
+.view-recipe {
   color:white;
   background-color: #C7253E;
   border-style: none;
@@ -159,7 +159,7 @@ img.food-pic{
   font-weight:500;
 }
 
-.example-recipie {
+.example-recipe {
   display: flex;
   flex-direction: column;
   align-items: center; 
@@ -180,13 +180,13 @@ img.food-pic{
 }
 
 /* Center the buttons */
-.example-recipie div:last-child {
+.example-recipe div:last-child {
   display: flex;
   justify-content: center;
 }
 
-/* Recipie page */
-.recipie-html {
+/* recipe page */
+.recipe-html {
   margin: 30px;
   margin-bottom: 10px;
   padding: 30px;

@@ -15,7 +15,7 @@ get('/') do
   erb(:homepage)
 end
 
-get('/recipies') do
+get('/recipes') do
   client = OpenAI::Client.new(access_token: ENV.fetch('OPENAI_API_KEY'))
 
   raw_input = params[:ingredients]
@@ -51,5 +51,5 @@ get('/recipies') do
   @markdown = Redcarpet::Markdown.new(renderer)
   @response_html = @markdown.render(@content)
 
-  erb(:recipies)
+  erb(:recipes)
 end
