@@ -1,3 +1,0 @@
-#!/bin/bash
-
-pry -r ./app.rb -r ./config/environment.rb -r "table_print"
