@@ -1,3 +1,15 @@
+/* Flash error message */
+.flash-error {
+  background: #ffdddd;
+  color: #a94442;
+  border: 1px solid #a94442;
+  padding: 12px;
+  margin: 20px auto;
+  width: 80%;
+  text-align: center;
+  border-radius: 8px;
+  font-weight: bold;
+}
 /* Remove default padding */
 
 * {

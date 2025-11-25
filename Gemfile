@@ -8,6 +8,7 @@ gem 'rubocop'
 gem 'ruby-openai'
 gem 'sinatra'
 gem 'sinatra-contrib'
+gem 'sinatra-flash'
 
 # Use Puma as the app server
 gem 'puma', '~> 5.0'
